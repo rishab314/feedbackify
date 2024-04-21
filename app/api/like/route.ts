@@ -28,7 +28,7 @@ export async function POST(req:NextRequest,res:NextApiResponse){
       });
     return Response.json(updatedPost )
 }
-export async function Delete(req:NextRequest,res:NextApiResponse) {
+export async function DELETE(req:NextRequest,res:NextApiResponse) {
     const {postId}=  await req.json()
     const {currentUser} = await serverAuth(req,res)
     if (!postId || typeof postId !== 'string') {
